@@ -8,6 +8,8 @@ data={
     'score': [88, 92, 85, 70, 90, 95]
 }
 
+# 1basic pandas
+
 # 1.Select all rows where age is greater than 25:
 
 df=pd.DataFrame(data)
@@ -41,13 +43,21 @@ result=df.groupby('city')['age'].mean()
 # print(result)
 
 
-# 7. Filter rows where the name contains the letter 'a':
+# 7. Filter rows where the name contains the letter 'a':(  search  )
 result=df[df['name'].str.contains('a',case=False)]
 # print(result)
 
 # 8. Select the top 3 rows with the highest scores:
 result=df.nlargest(3,'score')
-print(result)
+# print(result)
+
+
+
+# Boolean   Indexing;
+
+
+
+
 
 
 
