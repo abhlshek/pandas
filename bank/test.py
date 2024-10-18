@@ -2,6 +2,8 @@ import pandas as pd
 def readfromexcel():
     df=pd.read_excel("bank/sbi.xlsx",index_col=0)
     return df
+
+
 def GetBalance(accno):
     try:
         df=readfromexcel()
@@ -35,6 +37,7 @@ def NewAccount(accno,name,balance):
         return True
     except:
         return False
+    
 def ChangeBalance(accno,newbalance):
     try:
         newdata = {'accno': [accno],

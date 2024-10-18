@@ -69,7 +69,20 @@ def ChangeBalance(accountno,newbalance):
         return True
     except:
         return False
-x=ChangeBalance(31,100)
+# x=ChangeBalance(31,100)
+# print(x)
+
+def CloseAccount(accountno):
+    try:
+        df = readfromexcel()
+        df=df.drop(accountno)
+        print(df)
+        SaveToExcel(df)
+        return True
+    except:
+        return False
+    
+x=CloseAccount(31)
 print(x)
 
 
