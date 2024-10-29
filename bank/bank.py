@@ -8,17 +8,7 @@ def readfromexcel():
     return df
 
 
-def getaccountno(accountno):
-    try:
-        df=readfromexcel()
-        account = df[df['accountno'] == accountno]
-        return account
-    except:
-        return None
 
-
-x=getaccountno(100)
-print(x)
 
 
 
@@ -81,8 +71,26 @@ def CloseAccount(accountno):
         return True
     except:
         return False
-    
-x=CloseAccount(31)
+
+def getaccountno(accountno):
+    try:
+        df=readfromexcel()
+        # print(df)
+        # account = df[df['accountno']]
+        return df.loc[accountno]
+    except:
+        return None
+x=getaccountno(100)
 print(x)
+
+
+
+
+# Code Starts here
+
+# df=readfromexcel()
+# print(df)
+# x=df[df['name'] == "Dhoni"]
+# print(x)
 
 

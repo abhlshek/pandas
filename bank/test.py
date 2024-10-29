@@ -57,9 +57,9 @@ def SaveToExcel(df):
     df.to_excel("bank/sbi.xlsx")
 # NewAccount(44,"Jetha",500)
 # CloseAccount(44)
-#balance=GetBalance(4)
-#print(balance)
-ChangeBalance(4,400)
+balance=GetBalance(4)
+print(balance)
+# ChangeBalance(4,400)
 # x=GetBalance(3)
 # print(x)
 """
